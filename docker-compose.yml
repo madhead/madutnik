@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  tileserver-gl:
+    image: "maptiler/tileserver-gl:latest"
+    command:
+      - --config
+      - "/tileserver/config.json"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./tileserver:/tileserver
+      - ./styles:/styles
+
+  maputnik_editor:
+    image: "maputnik/editor:latest"
+    ports:
+      - "8888:8888"

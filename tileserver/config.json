@@ -1,0 +1,17 @@
+{
+  "options": {
+    "paths": {
+      "styles": "/styles"
+    }
+  },
+  "styles": {
+    "dye": {
+      "style": "dye.json"
+    }
+  },
+  "data": {
+    "openmaptiles": {
+      "mbtiles": "/tileserver/tiles/krakow.mbtiles"
+    }
+  }
+}
