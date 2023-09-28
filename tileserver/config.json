@@ -10,6 +10,9 @@
     },
     "dye+buildings": {
       "style": "dye+buildings.json"
+    },
+    "woodrant": {
+      "style": "woodrant.json"
     }
   },
   "data": {

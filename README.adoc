@@ -6,6 +6,8 @@ Mapbox styles:
 image:.images/dye.png[Dye]
 - link:styles/dye+buildings.json[Dye + Buildings], a https://maps.stamen.com/toner[Toner]-inspired, extreme contrast style with buildings.
 image:.images/dye+buildings.png[Dye + Buildings]
+- link:styles/woodrant.json[Woodrant], inspired by the "Vibrant" style of the https://woodscapemaps.com[Woodscape Maps].
+image:.images/woodrant.png[Dye + Buildings]
 
 == Quickstart
 

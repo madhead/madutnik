@@ -1,0 +1,181 @@
+{
+  "version": 8,
+  "name": "Woodrant",
+  "center": [
+    19.94269,
+    50.05531
+  ],
+  "zoom": 12,
+  "sources": {
+    "openmaptiles": {
+      "type": "vector",
+      "url": "mbtiles://{openmaptiles}"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "background-color": "#FFEABE"
+      }
+    },
+    {
+      "id": "parks",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "landcover",
+      "filter": [
+        "any",
+        [
+          "==",
+          "class",
+          "grass"
+        ],
+        [
+          "==",
+          "class",
+          "wood"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "#73B273"
+      }
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "water",
+      "paint": {
+        "fill-color": "#97DBF2"
+      }
+    },
+    {
+      "id": "transportation-primary",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "any",
+          [
+            "==",
+            "class",
+            "motorway"
+          ],
+          [
+            "==",
+            "class",
+            "trunk"
+          ],
+          [
+            "==",
+            "class",
+            "primary"
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#CFAD69",
+        "line-width": 5
+      }
+    },
+    {
+      "id": "transportation-secondary",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "any",
+          [
+            "==",
+            "class",
+            "rail"
+          ],
+          [
+            "==",
+            "class",
+            "secondary"
+          ],
+          [
+            "==",
+            "class",
+            "tertiary"
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#CFAD69",
+        "line-width": 3
+      }
+    },
+    {
+      "id": "transportation-minor",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "any",
+          [
+            "==",
+            "class",
+            "minor"
+          ],
+          [
+            "==",
+            "class",
+            "track"
+          ],
+          [
+            "==",
+            "class",
+            "service"
+          ]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#CFAD69",
+        "line-width": 1
+      }
+    }
+  ]
+}
