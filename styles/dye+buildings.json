@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Dye",
+  "name": "Dye + Buildings",
   "center": [
     19.94269,
     50.05531
@@ -153,6 +153,15 @@
           "river"
         ]
       ],
+      "paint": {
+        "fill-color": "#000"
+      }
+    },
+    {
+      "id": "buildings",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "building",
       "paint": {
         "fill-color": "#000"
       }

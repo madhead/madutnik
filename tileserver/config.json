@@ -7,6 +7,9 @@
   "styles": {
     "dye": {
       "style": "dye.json"
+    },
+    "dye+buildings": {
+      "style": "dye+buildings.json"
     }
   },
   "data": {
